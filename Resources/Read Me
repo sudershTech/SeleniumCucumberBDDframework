@@ -1,0 +1,7 @@
+Please use below mentioned configuration as per your system.
+
+Change in TestRunner.java
+"C:/Users/sudershs/IdeaProjects/cloudfinder/src/test/java/com/interra/assignment/Feature"
+
+Change in CloudFinder.java
+System.setProperty("webdriver.chrome.driver", "C:/Users/sudershs/IdeaProjects/cloudfinder/Resources/Selenium/Drivers/chromedriver.exe");

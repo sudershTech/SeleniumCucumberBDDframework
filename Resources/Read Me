@@ -1,7 +1,6 @@
 Please use below mentioned configuration as per your system.
 
-Change in TestRunner.java
-"C:/Users/sudershs/IdeaProjects/cloudfinder/src/test/java/com/interra/assignment/Feature"
-
-Change in CloudFinder.java
-System.setProperty("webdriver.chrome.driver", "C:/Users/sudershs/IdeaProjects/cloudfinder/Resources/Selenium/Drivers/chromedriver.exe");
+Change in TestBase.java
+"E:/cloudfinder/src/test/java/com/interra/assignment/Config/config.properties"
+ System.setProperty("webdriver.chrome.driver","E:/cloudfinder/Resources/Selenium/Drivers/chromedriver.exe");
+ System.setProperty("webdriver.gecko.driver","E:/cloudfinder/Resources/Selenium/Drivers/geckodriver.exe");

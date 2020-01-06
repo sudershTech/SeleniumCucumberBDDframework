@@ -14,7 +14,8 @@ import cucumber.api.testng.TestNGCucumberRunner;
         tags="@web, @Login", // Tags are used to execute some specific scenarios, we used in feature files
         format = {"pretty"},
         plugin={"html:target/cucumber-html-report","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
-        dryRun = false,  // if dryRun true means it will check all steps are there according to feature file, nothing missed.
+        dryRun = false,  // To check mapping is proper between feature file and step definition file
+        strict = true, // it will check if any step is not defined in step definition file
         monochrome = true // display the console output in a proper readable format
 )
 

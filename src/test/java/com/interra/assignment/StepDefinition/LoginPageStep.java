@@ -9,6 +9,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 import java.util.List;
+import java.util.Map;
 
 public class LoginPageStep extends TestBase {
     LoginPage lp;
@@ -38,11 +39,19 @@ public class LoginPageStep extends TestBase {
         lp.Enter_Password(password);
     }
 
+    /*Below code only for LoginSuccess feature file to implement dataTable with maps
+      and rest code are same for both feature file
+     */
     @When("^Enters username and password$")
     public void enters_username_and_password(DataTable credentials) {
-     List<List<String>> data =  credentials.raw();
-     lp.Enter_Username(data.get(0).get(0));
-     lp.Enter_Password(data.get(0).get(1));
+        //Below code is only for simple data table implementation
+        // List<List<String>> data =  credentials.raw();
+        // lp.Enter_Username(data.get(0).get(0));
+        // lp.Enter_Password(data.get(0).get(1));
+        for(Map<String,String> data : credentials.asMaps(String.class,String.class)){
+            lp.Enter_Username(data.get("username"));
+            lp.Enter_Password(data.get("password"));
+    }
     }
 
     // Click on login button
